@@ -6,5 +6,10 @@ pipeline {
                 sh 'node --version'
             }
         }
+        stage('running'){
+            steps{
+                sh 'node index.js'
+            }
+        }
     }
 }
