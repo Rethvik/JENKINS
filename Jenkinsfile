@@ -25,11 +25,11 @@ pipeline {
         }
         stage('Run python file'){
             steps{
-                if(params.OK){
                     script{
+                if(params.OK){
                         userScript.suggestUser()
-                    }
                 }
+                    }
             }
         }
     }
