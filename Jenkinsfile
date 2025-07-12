@@ -17,7 +17,7 @@ pipeline {
         stage('Run python file'){
             steps{
                 script{
-                    if (${params.OK})
+                    if (params.OK)
                     {
                         sh 'python index.py 21'
                     }
