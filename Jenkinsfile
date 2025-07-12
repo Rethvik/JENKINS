@@ -18,13 +18,17 @@ pipeline {
         }
         stage('Build') {
             steps {
-                userScript.greetUser()
+                script{
+                    userScript.greetUser()
+                }
             }
         }
         stage('Run python file'){
             steps{
                 if(params.OK){
-                    userScript.suggestUser()
+                    script{
+                        userScript.suggestUser()
+                    }
                 }
             }
         }
