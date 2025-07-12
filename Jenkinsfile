@@ -1,14 +1,14 @@
 pipeline {
-    agent { docker { image 'node:16-alpine' } }
+    agent { docker { image 'python:3.11' } }
     stages {
-        stage('building') {
+        stage('Build') {
             steps {
-                sh 'node --version'
+                echo 'Build Stage'
             }
         }
-        stage('running'){
+        stage('Run python file'){
             steps{
-                sh 'node index.js'
+                sh 'python index.py'
             }
         }
     }
