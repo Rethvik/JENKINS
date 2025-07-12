@@ -4,7 +4,7 @@ pipeline {
         NAME='RETHVIK'
     }
     parameters{
-        text(name:'age',defaultValue:15,description:'Options to select age')
+        text(name:'age',defaultValue:'15',description:'Options to select age')
         booleanParam(name:'OK',defaultValue:true,description:'I will say what in my mind')
     }
     stages {
